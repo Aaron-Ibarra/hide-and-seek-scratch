@@ -33,3 +33,19 @@ header .logo {
 main {
     padding: 20px;
 }
+
+#spooky-images {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+.house {
+    width: 200px;
+}
+
+#opener {
+    display: flex;
+    justify-content: center;
+}
