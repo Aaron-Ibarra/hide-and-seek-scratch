@@ -7,6 +7,9 @@ const firstGhost = document.getElementById('ghost-1');
 const secondGhost = document.getElementById('ghost-2');
 const thirdGhost = document.getElementById('ghost-3');
 
+const winsEl = document.getElementById('wins');
+const lossesEl = document.getElementById('losses');
+const totalEl = document.getElementById('total');
 /* State */
 const houses = ['house-1', 'house-2', 'house-3'];
 
@@ -48,8 +51,7 @@ function calculateGuess(answer, guess) {
     } else {
         thirdGhost.classList.toggle('hidden');
     }
-    console.log(correctGuesses);
-    console.log(totalGuesses);
+    updateScores();
 }
 
 /* Display Functions */
@@ -65,4 +67,9 @@ function generateAnswer() {
     const correctAnswer = houses[hauntedHouse];
     return correctAnswer;
 }
-// (don't forget to call any display functions you want to run on page load!)
+
+function updateScores() {
+    totalEl.textContent = totalGuesses;
+    winsEl.textContent = correctGuesses;
+    lossesEl.textContent = totalGuesses - correctGuesses;
+}
