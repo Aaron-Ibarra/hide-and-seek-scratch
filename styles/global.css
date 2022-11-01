@@ -32,17 +32,24 @@ header .logo {
 
 main {
     padding: 20px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
 }
 
 #spooky-images {
     display: flex;
     flex-direction: row;
-    align-content: space-around;
+    /* align-content: space-around; */
     justify-content: center;
+    height: 400px;
 }
 
 .house {
     width: 200px;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 #opener {
@@ -53,13 +60,23 @@ main {
 button {
     color: white;
     background: black;
+    position: relative;
 }
 
 .ghost {
     width: 100px;
-    transform: translateY(-200);
+    /* transform: translateY(-200); */
+    position: absolute;
+    top: 40px;
+    left: 30px;
 }
 
 .hidden {
     display: none;
+}
+
+.spooky {
+    position: relative;
+    top: 0;
+    left: 0;
 }
