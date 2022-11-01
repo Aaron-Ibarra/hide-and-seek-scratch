@@ -65,10 +65,8 @@ button {
 
 .ghost {
     width: 100px;
-    /* transform: translateY(-200); */
     position: absolute;
-    top: 40px;
-    left: 30px;
+    left: 20px;
 }
 
 .hidden {

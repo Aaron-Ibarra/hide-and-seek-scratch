@@ -2,6 +2,7 @@
 const firstButton = document.getElementById('btn-1');
 const secondButton = document.getElementById('btn-2');
 const thirdButton = document.getElementById('btn-3');
+const resetButton = document.getElementById('btn-reset');
 
 const firstGhost = document.getElementById('ghost-1');
 const secondGhost = document.getElementById('ghost-2');
@@ -39,6 +40,13 @@ thirdButton.addEventListener('click', () => {
         correctGuesses++;
     }
     calculateGuess(correctAnswer, 'house-3');
+});
+
+resetButton.addEventListener('click', () => {
+    totalGuesses = 0;
+    correctGuesses = 0;
+    updateScores();
+    resetDisplay();
 });
 
 function calculateGuess(answer, guess) {
