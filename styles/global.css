@@ -1,13 +1,13 @@
 :root {
-    --background: rgb(224, 234, 247);
-    --header-background: rgb(254, 251, 245);
+    --background: rgb(110, 110, 110);
+    --header-background: rgb(117, 117, 117);
     --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
         'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
 }
 
 body {
     font-family: var(--primary-font);
-    background: var(--background);
+    background-image: url('https://img.freepik.com/free-vector/realistic-fog-background_23-2149115275.jpg?w=1800&t=st=1667331660~exp=1667332260~hmac=51c9ce9be8ec403863ea60593f0f555708a35744d38561c7a2791384945ded25');
     display: grid;
     grid-template-rows: auto 1fr;
 }
@@ -19,6 +19,7 @@ header {
     height: 80px;
 
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 10px;
 
@@ -32,7 +33,6 @@ header .logo {
 
 main {
     padding: 20px;
-    /* display: flex; */
     justify-content: center;
     align-items: center;
 }
@@ -40,7 +40,6 @@ main {
 #spooky-images {
     display: flex;
     flex-direction: row;
-    /* align-content: space-around; */
     justify-content: center;
     height: 400px;
 }
@@ -59,12 +58,12 @@ main {
 
 button {
     color: white;
-    background: black;
-    position: relative;
+    background: rgb(42, 26, 51);
+    width: 50%;
 }
 
 .ghost {
-    width: 100px;
+    width: 80px;
     position: absolute;
     left: 20px;
 }
@@ -77,10 +76,25 @@ button {
     position: relative;
     top: 0;
     left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
 }
 
 #stats {
     display: flex;
     justify-content: center;
     gap: 50px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#btn-reset {
+    max-width: 50px;
+}
+
+h2 {
+    background-color: rgb(82, 42, 42);
+    border-radius: 10px;
 }
