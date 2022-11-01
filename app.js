@@ -15,26 +15,54 @@ let correctGuesses = 0;
 
 /* Events */
 firstButton.addEventListener('click', () => {
-    const hauntedHouse = Math.floor(Math.random() * 3);
-    const correctAnswer = houses[hauntedHouse];
-    console.log(correctAnswer);
-    // calculateGuess(correctAnswer, 'house-1');
+    const correctAnswer = generateAnswer();
+    if (correctAnswer === 'house-1') {
+        correctGuesses++;
+    }
+    calculateGuess(correctAnswer, 'house-1');
 });
 
 secondButton.addEventListener('click', () => {
-    const hauntedHouse = Math.floor(Math.random() * 3);
-    const correctAnswer = houses[hauntedHouse];
-    console.log(correctAnswer);
-    // calculateGuess(correctAnswer, 'house-2');
+    const correctAnswer = generateAnswer();
+    if (correctAnswer === 'house-2') {
+        correctGuesses++;
+    }
+    calculateGuess(correctAnswer, 'house-2');
 });
 
 thirdButton.addEventListener('click', () => {
-    const hauntedHouse = Math.floor(Math.random() * 3);
-    const correctAnswer = houses[hauntedHouse];
-    console.log(correctAnswer);
-    // calculateGuess(correctAnswer, 'house-3');
+    const correctAnswer = generateAnswer();
+    if (correctAnswer === 'house-3') {
+        correctGuesses++;
+    }
+    calculateGuess(correctAnswer, 'house-3');
 });
+
+function calculateGuess(answer, guess) {
+    resetDisplay();
+    totalGuesses++;
+    if (answer === 'house-1') {
+        firstGhost.classList.toggle('hidden');
+    } else if (answer === 'house-2') {
+        secondGhost.classList.toggle('hidden');
+    } else {
+        thirdGhost.classList.toggle('hidden');
+    }
+    console.log(correctGuesses);
+    console.log(totalGuesses);
+}
 
 /* Display Functions */
 
+function resetDisplay() {
+    firstGhost.classList.add('hidden');
+    secondGhost.classList.add('hidden');
+    thirdGhost.classList.add('hidden');
+}
+
+function generateAnswer() {
+    const hauntedHouse = Math.floor(Math.random() * 3);
+    const correctAnswer = houses[hauntedHouse];
+    return correctAnswer;
+}
 // (don't forget to call any display functions you want to run on page load!)
