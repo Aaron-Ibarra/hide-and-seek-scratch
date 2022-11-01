@@ -37,7 +37,7 @@ main {
 #spooky-images {
     display: flex;
     flex-direction: row;
-    align-content: center;
+    align-content: space-around;
     justify-content: center;
 }
 
@@ -48,4 +48,18 @@ main {
 #opener {
     display: flex;
     justify-content: center;
+}
+
+button {
+    color: white;
+    background: black;
+}
+
+.ghost {
+    width: 100px;
+    transform: translateY(-200);
+}
+
+.hidden {
+    display: none;
 }

@@ -1,6 +1,5 @@
-/* Imports */
-
 /* Get DOM Elements */
+const firstButton = document.querySelector;
 
 /* State */
 
